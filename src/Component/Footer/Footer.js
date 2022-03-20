@@ -15,7 +15,7 @@ export default function Footer() {
       <FooterContainer>
         <FooterInfo>
           <Image />
-          <Link to='' className='info'>
+          <Link to="" className="info">
             <p>© 2022 GitHub, Inc.</p>
           </Link>
         </FooterInfo>
@@ -23,8 +23,10 @@ export default function Footer() {
           {footerData.map((item, index) => (
             <FooterItem key={index}>
               {item.map((child) => (
-                <Link to={child.footerLink} className='listItems'>
-                  <div key={child.footerText}>{child.footerText}</div>
+                <Link to={child.footerLink} className="listItems">
+                  <div key={child.footerText} className="listItem">
+                    {child.footerText}
+                  </div>
                 </Link>
               ))}
             </FooterItem>

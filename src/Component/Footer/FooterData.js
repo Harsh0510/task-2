@@ -11,11 +11,14 @@ const footerData = [
     { footerText: "Training", footerLink: "#" },
     { footerText: "Status", footerLink: "#" },
     { footerText: "Security", footerLink: "#" },
+    { footerText: "FAQs", footerLink: "#" },
   ],
   [
     { footerText: "Terms", footerLink: "#" },
     { footerText: "Privacy", footerLink: "#" },
     { footerText: "Docs", footerLink: "#" },
+    { footerText: "Contact GitHub", footerLink: "#" },
+    { footerText: "About", footerLink: "#" },
   ],
 ];
 

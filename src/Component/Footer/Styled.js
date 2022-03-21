@@ -8,9 +8,9 @@ const FooterContainer = styled.div`
   left: 0;
   bottom: 0;
   width: 100%;
+  padding: 1rem 0;
   @media screen and (max-width: 600px) {
     flex-direction: column;
-    padding: 1rem 0;
   }
 `;
 const FooterItem = styled.div`
@@ -54,7 +54,7 @@ const Image = styled.img.attrs(() => ({
 }))`
   height: 40%;
   @media screen and (max-width: 600px) {
-    height: 10vh;
+    height: 5vh;
   }
 `;
 

@@ -12,9 +12,9 @@ export default function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<GetAllUsers />} />
-        <Route path="/createUser" element={<CreateUser />} />
-        <Route path="/editUser/:id" element={<UpdateUser />} />
+        <Route path='/' element={<GetAllUsers />} />
+        <Route path='/createUser' element={<CreateUser />} />
+        <Route path='/editUser/:id' element={<UpdateUser />} />
       </Routes>
       <Footer />
     </>

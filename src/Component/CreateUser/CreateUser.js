@@ -1,6 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { PostUsers } from "../../services/user";
+import {
+  FormContainer,
+  Form,
+  FormInput,
+  Input,
+  Button,
+  Paragraph,
+} from "./styled";
 import { validateFormValues } from "../../utils/validation";
 
 export default function CreateUser() {
@@ -55,68 +63,68 @@ export default function CreateUser() {
     }
   }, [formErrors]);
   return (
-    <>
-      <h5>Enter User Details</h5>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <div>
-            <input
-              type="text"
-              placeholder="First Name"
+    <FormContainer>
+      <h5 className='header'>Enter User Details</h5>
+      <Form>
+        <form onSubmit={handleSubmit}>
+          <FormInput>
+            <Input
+              type='text'
+              placeholder='First Name'
               value={firstName}
               onChange={(e) => {
                 setFirstName(e.target.value);
               }}
             />
-            <p>{formErrors.firstName}</p>
-          </div>
-          <div>
-            <input
-              type="text"
-              placeholder="Last Name"
+            <Paragraph>{formErrors.firstName}</Paragraph>
+          </FormInput>
+          <FormInput>
+            <Input
+              type='text'
+              placeholder='Last Name'
               value={lastName}
               onChange={(e) => {
                 setLastName(e.target.value);
               }}
             />
-            <p>{formErrors.lastName}</p>
-          </div>
-          <div>
-            <input
-              type="password"
-              placeholder="Password"
+            <Paragraph>{formErrors.lastName}</Paragraph>
+          </FormInput>
+          <FormInput>
+            <Input
+              type='password'
+              placeholder='Password'
               value={password}
               onChange={(e) => {
                 setPassword(e.target.value);
               }}
             />
-            <p>{formErrors.password}</p>
-          </div>
-          <div>
-            <input
-              type="text"
-              placeholder="Email address"
+            <Paragraph>{formErrors.password}</Paragraph>
+          </FormInput>
+          <FormInput>
+            <Input
+              type='text'
+              placeholder='Email address'
               value={emailAddress}
               onChange={(e) => {
                 setEmailAddress(e.target.value);
               }}
             />
-            <p>{formErrors.emailAddress}</p>
-          </div>
-          <div>
-            <input
-              type="text"
-              placeholder="Mobile Number"
+            <Paragraph>{formErrors.emailAddress}</Paragraph>
+          </FormInput>
+          <FormInput>
+            <Input
+              type='text'
+              placeholder='Mobile Number'
               value={mobileNumber}
               onChange={(e) => {
                 setMobileNumber(e.target.value);
               }}
             />
-            <p>{formErrors.mobileNumber}</p>
-          </div>
-          <button type="submit">Create User</button>
-        </div>
-      </form>
-    </>
+            <Paragraph>{formErrors.mobileNumber}</Paragraph>
+          </FormInput>
+          <Button type='submit'>Create User</Button>
+        </form>
+      </Form>
+    </FormContainer>
   );
 }

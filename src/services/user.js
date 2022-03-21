@@ -3,7 +3,7 @@ import axios from "axios";
 const api = "http://localhost:3000/users";
 
 const GetUsers = async () => {
-  return await axios.get(api);
+  return await axios.get(api, { params: { page: 1, limit: 5 } });
 };
 const GetUserById = async (id) => {
   return await axios.get(api + `/${id}`);

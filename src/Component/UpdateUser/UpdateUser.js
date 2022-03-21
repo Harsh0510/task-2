@@ -1,4 +1,11 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
+import {
+  FormContainer,
+  Form,
+  FormInput,
+  Input,
+  Button,
+} from "../CreateUser/styled";
 
 import { GetUsers, GetUserById, UpdateUsers } from "../../services/user";
 import { useEffect, useState } from "react";
@@ -43,68 +50,68 @@ export default function UpdateUser() {
   }
 
   return (
-    <>
-      <h5>Update User Details</h5>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <div className="mb-3">
-            <input
-              type="text"
-              placeholder="First Name"
+    <FormContainer>
+      <h5 className='header'>Update User Details</h5>
+      <Form>
+        <form onSubmit={handleSubmit}>
+          <FormInput>
+            <Input
+              type='text'
+              placeholder='First Name'
               required
               value={firstName}
               onChange={(e) => {
                 setFirstName(e.target.value);
               }}
             />
-          </div>
-          <div>
-            <input
-              type="text"
-              placeholder="Last Name"
+          </FormInput>
+          <FormInput>
+            <Input
+              type='text'
+              placeholder='Last Name'
               required
               value={lastName}
               onChange={(e) => {
                 setLastName(e.target.value);
               }}
             />
-          </div>
-          <div>
-            <input
-              type="password"
-              placeholder="Password"
+          </FormInput>
+          <FormInput>
+            <Input
+              type='password'
+              placeholder='Password'
               required
               value={password}
               onChange={(e) => {
                 setPassword(e.target.value);
               }}
             />
-          </div>
-          <div>
-            <input
-              type="text"
-              placeholder="Email address"
+          </FormInput>
+          <FormInput>
+            <Input
+              type='text'
+              placeholder='Email address'
               required
               value={emailAddress}
               onChange={(e) => {
                 setEmailAddress(e.target.value);
               }}
             />
-          </div>
-          <div>
-            <input
-              type="text"
-              placeholder="Mobile Number"
+          </FormInput>
+          <FormInput>
+            <Input
+              type='text'
+              placeholder='Mobile Number'
               required
               value={mobileNumber}
               onChange={(e) => {
                 setMobileNumber(e.target.value);
               }}
             />
-          </div>
-          <button type="submit">Update User</button>
-        </div>
-      </form>
-    </>
+          </FormInput>
+          <Button type='submit'>Update User</Button>
+        </form>
+      </Form>
+    </FormContainer>
   );
 }
